@@ -3,7 +3,6 @@ import { Outlet } from 'react-router'
 
 import Logo from '../components/Logo'
 import Navigation from '../components/Navigation'
-import Crypto from './Crypto'
 import { CryptoProvider } from '../context/CryptoContext';
 
 const Home = () => {
@@ -13,7 +12,6 @@ const Home = () => {
         <div className="w-screen h-screen bg-gray-300 fixed -z-10" />
         <Logo />
         <Navigation />
-        <Crypto />
 
         <Outlet />
       </main>

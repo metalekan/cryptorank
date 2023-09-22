@@ -6,13 +6,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-// import App from './App.jsx'
 import Home from './pages/Home'
 import Crypto from './pages/Crypto'
 import Trending from './pages/Trending'
 import Saved from './pages/Saved'
 
 import './index.css'
+import CryptoDetails from './components/CryptoDetails';
 
 const router = createBrowserRouter([
   {
@@ -20,8 +20,14 @@ const router = createBrowserRouter([
     element: <Home/>,
     children: [
       {
-        path: "/crypto",
-        element: <Crypto/>
+        path: "/",
+        element: <Crypto />,
+        children: [
+          {
+            path: ":coinId",
+            element: <CryptoDetails/>,
+          }
+        ]
       },
       {
         path: "/trending",
