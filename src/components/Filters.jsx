@@ -24,18 +24,18 @@ const Filters = () => {
   }
 
   return (
-    <div className='w-full h-12 border-2 border-gray-100 rounded-lg flex items-center justify-between relative'>
-      <div className="">
+    <div className='w-full py-2 border-2 border-gray-100 rounded-lg flex flex-col flex-wrap md:flex-row items-center justify-between relative'>
+      <div className="w-full md:w-0">
         <Search />
       </div>
-      <div className="flex mr-7">
+      <div className="flex flex-wrap md:mr-7 mx-2 py-2 gap-2">
         <form
           className='relative flex items-center font-nunito mr-12'
           onSubmit={handleCurrencySubmit}
         >
           <label className='relative flex items-center mr-2 font-bold' htmlFor="currency">currency: </label>
           <input
-            className='w-20 rounded bg-gray-200 placeholder:text-gray-100 pl-2 required outline-0 border border-transparent focus:border-cyan leading-4' type="text"
+            className='w-20 rounded bg-gray-200 placeholder:text-gray-100 pl-2 required outline-0 border border-transparent focus:border-cyan leading-4 py-1' type="text"
             name='currency'
             ref={currencyRef}
             placeholder='usd/ngn'
@@ -48,7 +48,7 @@ const Filters = () => {
           <span className='font-bold mr-2'>sort by:</span>
           <select
             name="sortby"
-            className='rounded bg-gray-200 text-base pl-2 pr-10 py-0.5 leading-4 capitalize focus:outline-0'
+            className='rounded bg-gray-200 text-base pl-2 pr-10 py-1 leading-4 capitalize focus:outline-0'
             onClick={handleSort}
           >
             <option value="market_cap_desc">market cap decrease</option>

@@ -9,13 +9,12 @@ const TableComponent = () => {
     return (
         <>
             <div
-                className='flex flex-col mt-9 border border-gray-100 rounded'
+                className='flex flex-col mt-9 border border-gray-100 rounded overflow-scroll'
             >
                 {
                     cryptoData ? <table className='w-full table-auto'>
-                        <thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100'>
+                        <thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100 scrollbar-thin scrollbar-thumb-gray-100'>
                             <tr>
-
                                 <th className='py-1'>assets</th>
                                 <th className='py-1'>name</th>
                                 <th className='py-1'>price</th>
@@ -77,8 +76,8 @@ const TableComponent = () => {
                     </table> : null
                 }
             </div>
-            <div className="flex items-center justify-between mt-4 capitalize h-[2rem]">
-                <span>Data provided by <a className='text-cyan' href="http://coingecko.com" rel='noreferrer' target={'_blanlk'}>Coingecko</a></span>
+            <div className="flex flex-col md:flex-row items-center justify-between mt-4 capitalize h-[2rem]">
+                <span>Data provided by <a className='text-cyan' href="http://coingecko.com" rel='noreferrer' target={'_blank'}>Coingecko</a></span>
                 <Pagination />
             </div>
         </>

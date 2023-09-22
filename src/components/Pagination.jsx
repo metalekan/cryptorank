@@ -77,7 +77,7 @@ const Pagination = () => {
 
     if (cryptoData && cryptoData.length >= page) {
         return (
-            <div className='flex items-center'>
+            <div className='flex items-center mt-4 md:mt-0'>
                 <PerPageElement />
                 <ul className='flex items-center justify-end text-sm'>
                     <li className='flex items-center'>

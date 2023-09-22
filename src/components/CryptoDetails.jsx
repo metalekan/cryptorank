@@ -44,13 +44,13 @@ const CryptoDetails = () => {
     <div className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 first-letter:backdrop-blur-sm flex items-center justify-center font-nunito'
       onClick={close}
     >
-      <div className="w-[65%] h-[75%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative"
+      <div className="w-[85%] h-[85%] md:w-[65%] md:h-[75%] bg-gray-300 bg-opacity-45 rounded-lg text-white relative"
         onClick={(e) => e.stopPropagation()}
       >
         {
           coinData ?
-            <div className='flex items-center justify-between h-full w-full p-4'>
-              <div className="flex flex-col w-[45%] h-full pr-2">
+            <div className='flex items-center justify-between h-full w-full p-2'>
+              <div className="flex flex-col justify-between w-full md:w-[45%] h-full pr-2">
                 <div className="flex items-center w-full">
                   <img className='w-[3rem] h-[3rem] mx-1.5' src={coinData.image.large} alt={coinData.id} />
                   <h1 className='text-xl capitalize font-medium'>{coinData.name}</h1>
@@ -160,10 +160,11 @@ const CryptoDetails = () => {
                     </div>
                   </div>
                 </div>
+
               </div>
 
 
-              <div className="flex flex-col justify-between w-[55%] h-full pl-3">
+              <div className="hidden md:flex flex-col justify-between w-[55%] h-full pl-3">
                 <Chart id={coinData.id} />
 
                 <div className="flex flex-col mt-4 capitalize ">
@@ -172,7 +173,7 @@ const CryptoDetails = () => {
                   <h3 className='text-white py-1'><span className='text-gray-100 mr-1'>watchlist users: </span>{coinData.watchlist_portfolio_users}</h3>
                 </div>
 
-                <div className="flex items-center gap-4 self-end border-4">
+                <div className="flex items-center gap-4 self-end">
                   <a target={"_blank"} href={`https://twitter.com/${coinData.links.twitter_screen_name}`}><BsTwitter className='text-cyan text-lg' /></a>
                   <a target={"_blank"} href={`https://t.me/${coinData.links.telegram_channel_identifier}`}><BsTelegram className='text-cyan text-lg' /></a>
                   <a target={"_blank"} href={coinData.links.chat_url[0]}><BsDiscord className='text-cyan text-lg' /></a>
