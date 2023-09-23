@@ -9,7 +9,7 @@ const TableComponent = () => {
     return (
         <>
             <div
-                className='flex flex-col mt-9 border-2 border-gray-100 rounded-md overflow-auto'
+                className='flex flex-col mt-9 border-2 border-gray-100 rounded-md overflow-auto min-h-screen sticky left-0'
             >
                 {
                     cryptoData ? <table className='w-full table-auto overflow-scroll'>
