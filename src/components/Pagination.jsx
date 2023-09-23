@@ -22,7 +22,7 @@ const PerPageElement = () => {
             className='relative flex items-center font-nunito mr-12'
             onSubmit={handleSubmit}
         >
-            <label className='relative flex items-center mr-2 font-bold' htmlFor="perpage">per page: </label>
+            <label className='relative flex items-center text-sm mr-2 font-bold' htmlFor="perpage">per page: </label>
             <input
                 className='w-16 rounded bg-gray-200 placeholder:text-gray-100 pl-2 py-1 required outline-0 border border-transparent focus:border-cyan leading-4'
                 type="number"

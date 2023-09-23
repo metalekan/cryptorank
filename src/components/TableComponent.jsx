@@ -9,10 +9,10 @@ const TableComponent = () => {
     return (
         <>
             <div
-                className='flex flex-col mt-9 border border-gray-100 rounded overflow-scroll'
+                className='flex flex-col mt-9 border-2 border-gray-100 rounded-md overflow-auto'
             >
                 {
-                    cryptoData ? <table className='w-full table-auto'>
+                    cryptoData ? <table className='w-full table-auto overflow-scroll'>
                         <thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100'>
                             <tr className='sticky top-0'>
                                 <th className='py-1 sticky left-0 bg-gray-300 rounded'>assets</th>
