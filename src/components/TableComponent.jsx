@@ -13,9 +13,9 @@ const TableComponent = () => {
             >
                 {
                     cryptoData ? <table className='w-full table-auto'>
-                        <thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100 scrollbar-thin scrollbar-thumb-gray-100'>
-                            <tr>
-                                <th className='py-1'>assets</th>
+                        <thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100'>
+                            <tr className='sticky top-0'>
+                                <th className='py-1 sticky left-0 bg-gray-300 rounded'>assets</th>
                                 <th className='py-1'>name</th>
                                 <th className='py-1'>price</th>
                                 <th className='py-1'>market cap</th>
@@ -29,8 +29,8 @@ const TableComponent = () => {
                             {
                                 cryptoData.map((data, index) => {
                                     return (
-                                        <tr key={index} className='text-center text-base border-b border-gray-100 hover:bg-gray-200 last:border-b-0'>
-                                            <td className='py-4 flex items-end uppercase'>
+                                        <tr key={index} className='text-center text-sm md:text-base border-b border-gray-100 hover:bg-gray-200 last:border-b-0'>
+                                            <td className='py-4 flex items-end uppercase sticky left-0 bg-gray-300 md:bg-[none] rounded bg-opacity-100 w-[120px]'>
                                                 <button className='outline-0 border-0 bg-none cursor-pointer'>
                                                     <svg className='w-[1.5rem] ml-1.5 fill-gray-100 hover:fill-cyan' width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <g clipPath="url(#clip0_16_420)">
@@ -43,12 +43,13 @@ const TableComponent = () => {
                                                         </defs>
                                                     </svg>
                                                 </button>
-                                                <img className='w-[1.2rem] h-[1.2rem] mx-1.5' src={data.image} alt={data.name} />
-                                                <span>
-                                                    <Link to={`/${data.id}`}>
-                                                        {data.symbol}
-                                                    </Link>
-                                                </span>
+
+                                                <Link to={`/${data.id}`}>
+                                                    <div className="flex items-center">
+                                                        <img className='w-[1.2rem] h-[1.2rem] mx-1.5' src={data.image} alt={data.name} />
+                                                        <span>{data.symbol}</span>
+                                                    </div>
+                                                </Link>
                                             </td>
                                             <td className='py-4'>
                                                 <Link to={`/${data.id}`}>
