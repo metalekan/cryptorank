@@ -51,12 +51,12 @@ const Filters = () => {
             className='rounded bg-gray-200 text-base pl-2 pr-10 py-1 leading-4 capitalize focus:outline-0'
             onClick={handleSort}
           >
-            <option value="market_cap_desc">market cap decrease</option>
-            <option value="market_cap_asc">market cap increase</option>
-            <option value="volume_desc">volume decrease</option>
-            <option value="volume_asc">volume increase</option>
-            <option value="id_desc">z to a</option>
-            <option value="id_desc">a to z</option>
+            <option value="market_cap_desc">market cap desc</option>
+            <option value="market_cap_asc">market cap asc</option>
+            <option value="volume_desc">volume desc</option>
+            <option value="volume_asc">volume asc</option>
+            <option value="id_desc">name desc</option>
+            <option value="id_desc">name asc</option>
           </select>
         </label>
         <button className='w-[2rem] ml-4 hover:scale-110 transition-all transition-ease relative' onClick={resetFunction} >
