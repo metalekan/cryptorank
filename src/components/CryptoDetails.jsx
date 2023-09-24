@@ -44,7 +44,7 @@ const CryptoDetails = () => {
     <div className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 first-letter:backdrop-blur-sm flex items-center justify-center font-nunito'
       onClick={close}
     >
-      <div className="w-[85%] h-[85%] md:w-[65%] md:h-[75%] bg-gray-300 bg-opacity-45 rounded-lg text-white relative"
+      <div className="w-[85%] h-[70%] md:w-[65%] md:h-[75%] bg-gray-300 bg-opacity-45 rounded-lg text-white relative"
         onClick={(e) => e.stopPropagation()}
       >
         {

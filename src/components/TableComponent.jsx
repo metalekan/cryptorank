@@ -8,9 +8,9 @@ const TableComponent = () => {
     console.log(cryptoData);
 
     return (
-        <div className='flex flex-col justify-between'>
+        <div className='flex flex-col'>
             <div
-                className='flex flex-col mt-9 border-2 border-gray-100 rounded-md overflow-auto min-h-[50vh] sticky top-0 left-0'
+                className='flex flex-col mt-9 border-2 border-gray-100 rounded-md overflow-auto min-h-[50vh] stick left-0'
             >
                 {
                     cryptoData ? <table className='w-full table-auto overflow-scroll'>
@@ -275,10 +275,6 @@ const TableComponent = () => {
                 }
             </div>
             <Pagination />
-            <div className="hidden flex-col fixedd bottom-0 bg-red md:flex-row items-center justify-between capitalize">
-                <span>Data provided by <a className='text-cyan' href="http://coingecko.com" rel='noreferrer' target={'_blank'}>Coingecko</a></span>
-                <Pagination />
-            </div>
         </div>
     )
 }
