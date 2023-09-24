@@ -420,7 +420,7 @@ input:checked+.slider .circle::after {
 
 @keyframes fade00 {
     0% {
-        background: #252525;
+        background: #14ffec;
     }
 
     50% {

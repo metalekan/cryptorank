@@ -42,10 +42,10 @@ const CryptoDetails = () => {
 
 
   return ReactDOM.createPortal(
-    <div className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 first-letter:backdrop-blur-sm flex items-center justify-center font-nunito'
+    <div className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-0 first-letter:backdrop-blur-sm flex items-center justify-center font-nunito'
       onClick={close}
     >
-      <div className="w-[85%] h-[75%] md:w-[65%] md:h-[75%] bg-gray-300 bg-opacity-55 rounded-lg text-white relative"
+      <div className="w-[95%] h-[75%] md:w-[65%] md:h-[75%] bg-gray-300 bg-opacity-15 rounded-lg text-white relative"
         onClick={(e) => e.stopPropagation()}
       >
         {
