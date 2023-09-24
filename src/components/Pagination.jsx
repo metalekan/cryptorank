@@ -77,7 +77,7 @@ const Pagination = () => {
 
     if (cryptoData && cryptoData.length >= page) {
         return (
-            <div className='w-full flex gap-8 flex-col mt-4 md:mt-0 p-2 bg-opacity- z-50'>
+            <div className='w-full flex gap-8 flex-col mt-4 md:mt-0 p-2'>
                 <span>Data provided by <a className='text-cyan' href="http://coingecko.com" rel='noreferrer' target={'_blank'}>Coingecko</a></span>
                 <div className="flex justify-between">
                 <PerPageElement />
