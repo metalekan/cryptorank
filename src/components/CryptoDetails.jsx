@@ -45,7 +45,7 @@ const CryptoDetails = () => {
     <div className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 first-letter:backdrop-blur-sm flex items-center justify-center font-nunito'
       onClick={close}
     >
-      <div className="w-[85%] h-[75%] md:w-[65%] md:h-[75%] bg-gray-300 bg-opacity-45 rounded-lg text-white relative"
+      <div className="w-[85%] h-[75%] md:w-[65%] md:h-[75%] bg-gray-300 bg-opacity-55 rounded-lg text-white relative"
         onClick={(e) => e.stopPropagation()}
       >
         {
@@ -164,14 +164,13 @@ const CryptoDetails = () => {
 
               </div>
 
-
-              <div className={`${isReveal ? 'flex' : 'hidden'} md:flex flex-col justify-between items-center w-full md:w-[55%] h-full`}>
+              <div className={`${isReveal ? 'flex' : 'hidden'} md:flex flex-col justify-between w-full md:w-[55%] h-full py-4`}>
                 <Chart id={coinData.id} />
 
-                <div className="flex flex-col mt-4 capitalize text-sm">
-                  <h3 className='text-white py-1'><span className='text-gray-100 mr-1'>market cap rank: </span>{coinData.market_cap_rank}</h3>
-                  <h3 className='text-white py-1'><span className='text-gray-100 mr-1'>coinGecko rank: </span>{coinData.coingecko_rank}</h3>
-                  <h3 className='text-white py-1'><span className='text-gray-100 mr-1'>watchlist users: </span>{coinData.watchlist_portfolio_users}</h3>
+                <div className="flex flex-col gap-2 mt-4 capitalize">
+                  <h3 className='text-white py-1 border w-fit rounded-md p-2'><span className='text-gray-100 mr-1 text-sm'>market cap rank: </span>{coinData.market_cap_rank}</h3>
+                  <h3 className='text-white py-1  border w-fit rounded-md p-2'><span className='text-gray-100 mr-1 text-sm'>coinGecko rank: </span>{coinData.coingecko_rank}</h3>
+                  <h3 className='text-white py-1  border w-fit rounded-md p-2'><span className='text-gray-100 mr-1 text-sm'>watchlist users: </span>{coinData.watchlist_portfolio_users}</h3>
                 </div>
 
                 <div className="flex items-center gap-4 self-end">
@@ -181,7 +180,7 @@ const CryptoDetails = () => {
                 </div>
               </div>
 
-              <div className="absolute right-5 top-5 block md:hidden">
+              <div className="absolute right-5 top-2 block md:hidden">
                 <label className="switch border-2">
                   <input type="checkbox" onClick={()=> setIsReveal((prev) => !prev)}/>
                   <span className="slider">
