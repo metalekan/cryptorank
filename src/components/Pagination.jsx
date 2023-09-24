@@ -30,7 +30,7 @@ const PerPageElement = () => {
                 max={250}
                 name='per page'
                 ref={inputRef}
-                placeholder='10'
+                placeholder='20'
             />
             <button className='ml-1 cursor-pointer' type='submit'>
                 <img className='w-full h-auto' src={submitIcon} alt="submit" />
@@ -77,7 +77,8 @@ const Pagination = () => {
 
     if (cryptoData && cryptoData.length >= page) {
         return (
-            <div className='flex items-center mt-4 md:mt-0'>
+            <div className='w-full bg-cyan flex flex-col items-center mt-4 md:mt-0'>
+                <span>Data provided by <a className='text-cyan' href="http://coingecko.com" rel='noreferrer' target={'_blank'}>Coingecko</a></span>
                 <PerPageElement />
                 <ul className='flex items-center justify-end text-sm'>
                     <li className='flex items-center'>

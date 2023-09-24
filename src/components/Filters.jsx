@@ -28,7 +28,7 @@ const Filters = () => {
       <div className="w-full md:w-0">
         <Search />
       </div>
-      <div className="flex flex-wrap md:mr-7 mx-2 py-2 gap-2">
+      <div className="flex flex-wrap justify-center md:mr-7 mx-2 py-2 gap-2">
         <form
           className='relative flex items-center font-nunito mr-12'
           onSubmit={handleCurrencySubmit}
