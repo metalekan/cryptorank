@@ -79,7 +79,7 @@ const Pagination = () => {
         return (
             <div className='w-full flex gap-8 flex-col mt-4 md:mt-0 p-2'>
                 <span>Data provided by <a className='text-cyan' href="http://coingecko.com" rel='noreferrer' target={'_blank'}>Coingecko</a></span>
-                <div className="flex justify-between">
+                <div className="flex flex-wrap gap-3 justify-between">
                 <PerPageElement />
                 <ul className='flex items-center justify-end text-sm'>
                     <li className='flex items-center'>

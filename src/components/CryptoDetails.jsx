@@ -51,7 +51,7 @@ const CryptoDetails = () => {
         {
           coinData ?
             <div className='flex items-center justify-between h-full w-full p-2 relative'>
-              <div className={`${isReveal ? 'hidden' : 'flex'} md:flex flex-col justify-between w-full md:w-[45%] h-full pr-2`}>
+              <div className={`${isReveal ? 'hidden' : 'flex'} md:flex flex-col justify-between w-full md:w-[45%] h-full py-4`}>
                 <div className="flex items-center w-full">
                   <img className='w-[3rem] h-[3rem] mx-1.5' src={coinData.image.large} alt={coinData.id} />
                   <h1 className='text-xl capitalize font-medium'>{coinData.name}</h1>
