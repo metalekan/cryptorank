@@ -30,7 +30,7 @@ const PerPageElement = () => {
                 max={250}
                 name='per page'
                 ref={inputRef}
-                placeholder='20'
+                placeholder='10'
             />
             <button className='ml-1 cursor-pointer' type='submit'>
                 <img className='w-full h-auto' src={submitIcon} alt="submit" />

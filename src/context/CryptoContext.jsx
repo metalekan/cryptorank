@@ -16,7 +16,7 @@ export const CryptoProvider = ({ children }) => {
     const [sortBy, setSortBy] = useState("market_cap_desc");
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(250);
-    const [perPage, setPerPage] = useState(20)
+    const [perPage, setPerPage] = useState(10)
 
     
     const getCryptoData = async() => {
@@ -32,7 +32,7 @@ export const CryptoProvider = ({ children }) => {
             const res = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${coinSearch}&order=${sortBy}&per_page=${perPage}&page=${page}&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en`);
             const data = await res.json();
             setCryptoData(data);
-            console.log(data);
+            // console.log(data);
         } catch (error) {
             console.log("Limit reached")
         }
