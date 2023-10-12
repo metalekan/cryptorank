@@ -57,7 +57,8 @@ const SearchInput = ({ handleSearch }) => {
                                     <img className='w-[1rem] h-[1rem] mx-1.5' src={coin.thumb} alt={coin.name} />
                                     <span>{coin.name}</span>
                                 </li>
-                            )) : <div className='w-full h-full flex items-center justify-center'>
+                            )) : 
+                            <div className='w-full h-full flex items-center justify-center'>
                                 <div className='w-8 h-8 border-4 border-cyan rounded-full border-b-gray-200 animate-spin'
                                     role='status'
                                 />

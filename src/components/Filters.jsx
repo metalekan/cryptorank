@@ -24,8 +24,8 @@ const Filters = () => {
   }
 
   return (
-    <div className='w-full py-2 border-2 border-gray-100 rounded-lg flex flex-col flex-wrap md:flex-row items-center justify-between relative'>
-      <div className="w-full md:w-0">
+    <div className='w-full py-2 border-2 border-gray-100 rounded-lg flex flex-col flex-wrap gap-2 xl:gap-0 lg:flex-row items-center justify-between relative'>
+      <div className="w-full h-full lg:w-0">
         <Search />
       </div>
       <div className="flex flex-wrap justify-center md:mr-7 mx-2 py-2 gap-2">
@@ -55,8 +55,8 @@ const Filters = () => {
             <option value="market_cap_asc">market cap asc</option>
             <option value="volume_desc">volume desc</option>
             <option value="volume_asc">volume asc</option>
-            <option value="id_desc">name desc</option>
-            <option value="id_desc">name asc</option>
+            <option value="id_desc">name (z - a)</option>
+            <option value="id_asc">name (a - z)</option>
           </select>
         </label>
         <button className='w-[2rem] ml-4 hover:scale-110 transition-all transition-ease relative' onClick={resetFunction} >

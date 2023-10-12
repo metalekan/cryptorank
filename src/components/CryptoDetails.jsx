@@ -30,7 +30,7 @@ const CryptoDetails = () => {
   const navigate = useNavigate();
 
   const { getCoinData, coinData, currency } = useContext(CryptoContext)
-  // console.log(coinData)
+  console.log(coinData)
 
   useEffect(() => {
     getCoinData(coinId);
@@ -42,7 +42,7 @@ const CryptoDetails = () => {
 
 
   return ReactDOM.createPortal(
-    <div className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-0 first-letter:backdrop-blur-sm flex items-center justify-center font-nunito'
+    <div className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-80 first-letter:backdrop-blur-sm flex items-center justify-center font-nunito'
       onClick={close}
     >
       <div className="w-[95%] h-[75%] md:w-[65%] md:h-[75%] bg-gray-300 bg-opacity-15 rounded-lg text-white relative"
@@ -164,7 +164,7 @@ const CryptoDetails = () => {
 
               </div>
 
-              <div className={`${isReveal ? 'flex' : 'hidden'} md:flex flex-col justify-between w-full md:w-[55%] h-full py-4`}>
+              <div className={`${isReveal ? 'flex' : 'hidden'} md:flex flex-col justify-between w-full md:w-[55%] h-full py-4 px-2`}>
                 <Chart id={coinData.id} />
 
                 <div className="flex flex-col gap-2 mt-4 capitalize">
@@ -182,14 +182,20 @@ const CryptoDetails = () => {
 
               <div className="absolute right-5 top-2 block md:hidden">
                 <label className="switch border-2">
-                  <input type="checkbox" onClick={()=> setIsReveal((prev) => !prev)}/>
+                  <input type="checkbox" onClick={() => setIsReveal((prev) => !prev)} />
                   <span className="slider">
                     <span className="circle"></span>
                   </span>
                 </label>
               </div>
-              
-            </div> : null
+
+            </div> : <div className='w-full h-full flex items-center justify-center'>
+              <div className='w-8 h-8 border-4 border-cyan rounded-full border-b-gray-200 animate-spin'
+                role='status'
+              />
+              <span className='ml-3'>Please wait...</span>
+            </div>
+
         }
       </div>
     </div>,

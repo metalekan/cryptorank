@@ -4,6 +4,7 @@ import { createContext, useEffect, useState } from "react";
 // create context object
 export const CryptoContext = createContext({});
 
+
 // create the provider component
 export const CryptoProvider = ({ children }) => {
     const [cryptoData, setCryptoData] = useState();
@@ -18,13 +19,21 @@ export const CryptoProvider = ({ children }) => {
     const [totalPages, setTotalPages] = useState(250);
     const [perPage, setPerPage] = useState(10)
 
-    
+    const ErrorPage = () => {
+        return (
+            <h1 className="min-h-[60vh] text-lg text-cyan flex items-center justify-center">Limit reached please check back in few minutes...</h1>
+        )
+    }
+
     const getCryptoData = async() => {
+        setCryptoData();
         try {
             const res = await fetch(`https://api.coingecko.com/api/v3/coins/list`);
             const data = await res.json();
             setTotalPages(data.length)
         } catch (error) {
+            setCryptoData();
+            // <ErrorPage/>
             console.log("Limit reached")
         }
 
@@ -32,13 +41,13 @@ export const CryptoProvider = ({ children }) => {
             const res = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${coinSearch}&order=${sortBy}&per_page=${perPage}&page=${page}&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en`);
             const data = await res.json();
             setCryptoData(data);
-            // console.log(data);
         } catch (error) {
             console.log("Limit reached")
         }
     }
 
     const getCoinData = async(coinId) => {
+        setCoinData();
         try {
             const res = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=true&sparkline=false`);
             const data = await res.json();
@@ -87,7 +96,7 @@ export const CryptoProvider = ({ children }) => {
                 page, 
                 setPage, 
                 totalPages,
-                resetFunction, perPage, setPerPage}}>
+                resetFunction, perPage, setPerPage, ErrorPage}}>
             {children}
         </CryptoContext.Provider>
     )
