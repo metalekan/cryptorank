@@ -1,9 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 
-
 // create context object
 export const CryptoContext = createContext({});
-
 
 // create the provider component
 export const CryptoProvider = ({ children }) => {

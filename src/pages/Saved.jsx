@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 
 import { BiRefresh } from 'react-icons/bi';
+
 import { StorageContext } from "../context/StorageContext";
-import { Outlet } from "react-router";
 import { CryptoContext } from "../context/CryptoContext";
+
 import { Link } from "react-router-dom";
+
+import { Outlet } from "react-router";
 
 const SaveBtn = ({ data }) => {
   const { saveCoins, allCoins, removeCoin } = useContext(StorageContext)

@@ -1,3 +1,5 @@
+
+
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CryptoContext } from "../context/CryptoContext";
@@ -48,7 +50,7 @@ const TableComponent = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col mt-9 border-2 border-gray-100 rounded-md overflow-auto min-h-[60vh] md:min-h-[60vh] stick left-0">
+      <div className="flex flex-col mt-9 border-2 border-gray-100 rounded-md overflow-auto min-h-[40vh] lg:min-h-[50vh] stick left-0">
         {cryptoData ? (
           <table className="w-full table-auto overflow-scroll">
             <thead className="capitalize text-base text-gray-100 font-medium border-b border-gray-100">
@@ -122,36 +124,36 @@ const TableComponent = () => {
 
                     <td
                       className={
-                        data.market_cap_change_percentage_1h < 0
+                        data.market_cap_change_percentage_1h > 0
                           ? "text-green p-4"
                           : "text-red p-4"
                       }
                     >
                       {Number(
                         data.price_change_percentage_1h_in_currency
-                      ).toFixed(5)}
+                      ).toFixed(2)}%
                     </td>
                     <td
                       className={
-                        data.price_change_percentage_24h_in_currency < 0
+                        data.price_change_percentage_24h_in_currency > 0
                           ? "text-green p-4"
                           : "text-red p-4"
                       }
                     >
                       {Number(
                         data.price_change_percentage_24h_in_currency
-                      ).toFixed(3)}
+                      ).toFixed(2)}%
                     </td>
                     <td
                       className={
-                        data.price_change_percentage_7d_in_currency < 0
+                        data.price_change_percentage_7d_in_currency > 0
                           ? "text-green p-4"
                           : "text-red p-4"
                       }
                     >
                       {Number(
                         data.price_change_percentage_7d_in_currency
-                      ).toFixed(3)}
+                      ).toFixed(2)}%
                     </td>
                   </tr>
                 );
